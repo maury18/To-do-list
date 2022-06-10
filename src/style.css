@@ -39,7 +39,7 @@ i {
   border-bottom: 0.2rem solid #bbb;
 }
 
-input {
+.add-list {
   display: block;
   width: 100%;
   padding: 0.8rem;
@@ -50,7 +50,7 @@ input {
   color: #bbb;
 }
 
-input::placeholder {
+.add-list::placeholder {
   font-size: 1.5rem;
 }
 
