@@ -1,0 +1,14 @@
+/* eslint-disable no-unused-vars */
+const updatingData = () => {
+  const taskData = JSON.parse(localStorage.getItem('list'));
+  const tasks = document.querySelectorAll('span');
+  for (let i = 0; i < tasks.length; i += 1) {
+    if (tasks[i].classList.contains('task-checked')) {
+      taskData[i].completed = true;
+    } else {
+      taskData[i].completed = false;
+    }
+  }
+  localStorage.setItem('list', JSON.stringify(taskData));
+};
+export default updatingData;
