@@ -16,7 +16,7 @@ p {
 }
 
 i {
-  color: #bbb;
+  color: #000;
   margin: 0;
   padding: 0;
 }
@@ -39,7 +39,7 @@ i {
   border-bottom: 0.2rem solid #bbb;
 }
 
-.add-list {
+input {
   display: block;
   width: 100%;
   padding: 0.8rem;
@@ -47,11 +47,26 @@ i {
   border-bottom: 0.2rem solid #bbb;
   outline: none;
   font-size: 1.5rem;
-  color: #bbb;
+  color: #000;
 }
 
-.add-list::placeholder {
+input::placeholder {
   font-size: 1.5rem;
+}
+
+.fa-trash-can {
+  display: none;
+}
+
+.fa-ellipsis-vertical {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.fa-ellipsis-vertical:hover {
+  background-color: #000;
+  color: #fff;
+  padding: 0.2rem;
 }
 
 .new-task--container {
@@ -63,13 +78,7 @@ i {
   border-bottom: 0.2rem solid #bbb;
 }
 
-.left-content {
-  display: flex;
-  gap: 0.9rem;
-  align-items: center;
-}
-
-.left-content span {
+span {
   font-size: 1.5rem;
   color: #000;
   line-height: 0;
@@ -83,10 +92,20 @@ i {
   margin: 0;
 }
 
-.right-content {
-  display: flex;
-  gap: 0;
-  align-items: center;
+.task-checked {
+  text-decoration: line-through;
+}
+
+.trash-display {
+  display: block;
+}
+
+.checked-container {
+  background-color: #e4c649;
+}
+
+.dot-display {
+  display: none;
 }
 
 button {
@@ -97,8 +116,9 @@ button {
   border: none;
   background-color: #fff;
   font-size: 1.5rem;
+  transition: all 0.5s ease;
 }
-
-.fa-trash-can {
-  display: none;
+button:hover {
+  font-size: 1.7rem;
+  cursor: pointer;
 }
