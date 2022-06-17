@@ -22,14 +22,24 @@ Github.
 Code editor.
 
 ### Setup
+clone the repository from gitbash
 
 ### Install
+npm dependencies
 
 ### Usage
 
+simple app to ad tasks
+
 ### Run tests
 
+use webpack to run in localhost
+
 ### Deployment
+
+Feel free to use the code for development purposes
+
+
 
 ## Authors
 
