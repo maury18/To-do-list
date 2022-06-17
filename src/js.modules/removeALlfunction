@@ -1,0 +1,20 @@
+/* eslint-disable no-return-assign */
+/* eslint-disable no-multi-assign */
+/* eslint-disable arrow-parens */
+import removeTasks from './removeFunction.js';
+
+const removeAllTasks = () => {
+  const taskData = JSON.parse(localStorage.getItem('list'));
+  const allTasksContainer = document.querySelectorAll('.new-task--container');
+  allTasksContainer.forEach(i => {
+    if (i.classList.contains('.checked-container')) {
+      removeTasks(i);
+    }
+  });
+  let count = 0;
+  const data = Array.from(taskData).filter(i => i.completed === false);
+  data.map(i => i.index = count += 1);
+  localStorage.setItem('list', JSON.stringify(data));
+  window.location.reload();
+};
+export default removeAllTasks;
