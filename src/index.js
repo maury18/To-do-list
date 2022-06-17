@@ -6,10 +6,12 @@ import './style.css';
 import editTasks from './js.modules/editFunction.js';
 import removeTasks from './js.modules/removeFunction.js';
 import updatingData from './js.modules/updatingData';
+import removeAllTasks from './js.modules/removeALlfunction';
 
 /* All HTML References */
 const taskInput = document.querySelector('input');
 const tasksContainer = document.querySelector('.tasks-container');
+const completedTasks = document.querySelector('button');
 
 /* Class Object */
 class MyList {
@@ -99,3 +101,4 @@ const takeData = () => {
   localStorage.setItem('list', JSON.stringify(listArray));
 };
 window.addEventListener('load', takeData);
+completedTasks.addEventListener('click', removeAllTasks);
