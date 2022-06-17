@@ -1,7 +1,7 @@
 # To-do-list
 Creating the To do list app
 
->In this project I´m creating the "to-do list"app where I had to add tasks, to be more specific I had to add the title of the task, so far this app has the function to add and remove tasks.
+>In this project I´m creating the "to-do list"app where I had to add tasks, to be more specific I had to add the title of the task, this app has the function to add and remove tasks and the function to clear all the completed tasks.
 ## Built With
 
 - Html
