@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-undef */
 /* All Functions */
@@ -20,6 +21,7 @@ class MyList {
 }
 
 const listArray = [];
+export default listArray;
 const addTask = (taskValue) => {
   const newTaskContainer = document.createElement('div');
   newTaskContainer.classList.add('new-task--container');
@@ -37,8 +39,6 @@ const addTask = (taskValue) => {
     i.addEventListener('click', () => {
       i.parentElement.classList.toggle('checked-container');
       i.nextElementSibling.classList.toggle('task-checked');
-      i.parentElement.lastElementChild.classList.toggle('trash-display');
-      i.parentElement.lastElementChild.previousElementSibling.classList.toggle('dot-display');
       updatingData();
     });
   });
@@ -46,23 +46,7 @@ const addTask = (taskValue) => {
   const storageObject = new MyList(taskValue, false, checkbox.length - 1);
   listArray.push(storageObject);
   localStorage.setItem('list', JSON.stringify(listArray));
-
-  const editIcons = document.querySelectorAll('.fa-ellipsis-vertical');
-  editIcons.forEach((i) => {
-    i.addEventListener('click', () => {
-      editTasks(newTaskContainer, i.previousElementSibling);
-      i.parentElement.classList.add('checked-container');
-    });
-  });
-
-  const removeTask = document.querySelectorAll('.fa-trash-can');
-  removeTask.forEach((i) => {
-    i.addEventListener('click', () => {
-      removeTasks(i, parentElement);
-    });
-  });
 };
-
 /* Adding task Event */
 taskInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && taskInput.value) {
@@ -90,6 +74,8 @@ const takeData = () => {
       i.addEventListener('click', () => {
         editTasks(newTaskContainer, i.previousElementSibling);
         i.parentElement.classList.add('checked-container');
+        i.parentElement.lastElementChild.classList.toggle('trash-display');
+        updatingData();
       });
     });
   });
@@ -99,8 +85,6 @@ const takeData = () => {
     i.addEventListener('click', () => {
       i.parentElement.classList.toggle('checked-container');
       i.nextElementSibling.classList.toggle('task-checked');
-      i.parentElement.lastElementChild.classList.toggle('trash-display');
-      i.parentElement.lastElementChild.previousElementSibling.classList.toggle('dot-display');
       updatingData();
     });
   });
