@@ -36,7 +36,7 @@ const addTask = (taskValue) => {
   tasksContainer.appendChild(newTaskContainer);
 
   const checkbox = document.querySelectorAll('.check-task');
-  /* VAMOS AQUÍ */
+
   checkbox.forEach((i) => {
     i.addEventListener('click', () => {
       i.parentElement.classList.toggle('checked-container');

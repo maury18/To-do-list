@@ -2,6 +2,7 @@
 const updatingData = () => {
   const taskData = JSON.parse(localStorage.getItem('list'));
   const tasks = document.querySelectorAll('span');
+  const taskchecked = document.querySelectorAll('task-checked');
   for (let i = 0; i < tasks.length; i += 1) {
     if (tasks[i].classList.contains('task-checked')) {
       taskData[i].completed = true;
