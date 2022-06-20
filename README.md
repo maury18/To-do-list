@@ -11,6 +11,9 @@ Creating the To do list app
 - Npm dependencies
 - Linters
 
+#Live Demo
+https://maury18.github.io/To-do-list/
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
