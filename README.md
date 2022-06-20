@@ -1,8 +1,7 @@
 # To-do-list
 Creating the To do list app
 
->In this project I´m creating the "to-do list"app where I had to add tasks, to be more specific I had to add the title of the task, so far this app has only the structure but it´s already been added dynamically the adding a task part, I also added the all the getting started files for npm.
-
+>In this project I´m creating the "to-do list"app where I had to add tasks, to be more specific I had to add the title of the task, this app has the function to add and remove tasks and the function to clear all the completed tasks.
 ## Built With
 
 - Html
@@ -23,14 +22,24 @@ Github.
 Code editor.
 
 ### Setup
+clone the repository from gitbash
 
 ### Install
+npm dependencies
 
 ### Usage
 
+simple app to ad tasks
+
 ### Run tests
 
+use webpack to run in localhost
+
 ### Deployment
+
+Feel free to use the code for development purposes
+
+
 
 ## Authors
 
